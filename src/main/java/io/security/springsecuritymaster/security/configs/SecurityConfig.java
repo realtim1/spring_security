@@ -32,7 +32,8 @@ public class SecurityConfig {
 //                        .anyRequest().authenticated())
 //                .formLogin(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth.anyRequest().authenticated())
-                .formLogin(form -> form.loginPage("/loginPage")
+                .formLogin(form -> form
+//                        .loginPage("/loginPage")
                         .loginProcessingUrl("/loginProc")
                         .defaultSuccessUrl("/",true)
                         .failureUrl("/failed")
